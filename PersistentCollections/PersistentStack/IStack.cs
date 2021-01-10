@@ -4,8 +4,11 @@ using System.Text;
 
 namespace PersistentCollections.PersistentStack
 {
-    //Collection based upon Git structure, which prevent copying a complete collection everytime we push or pop some value T
-    //T must be Immutable valuetype for the collection to be immutable!
+    /*
+     * Immutable Collection based upon Git concept, which prevent copying a complete immutable collection everytime
+     * we push or pop some value T
+     * Either T must be a type whose instances are immutable , or only instances that will remain immutable may be pushed.
+    */
     public interface IStack<T> 
     {
         int Depth();
